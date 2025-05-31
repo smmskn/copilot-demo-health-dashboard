@@ -1,5 +1,4 @@
 # copilot-demo-health-dashboard
-# copilot-demo-health-dashboard
 
 A simple web-based BMI & Health Dashboard. Users can log in, enter their health data, and view calculated health metrics such as BMI, BMR, daily calorie needs, water intake, protein intake, and body fat percentage.
 
