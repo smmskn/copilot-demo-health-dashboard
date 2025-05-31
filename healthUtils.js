@@ -5,8 +5,8 @@ function calculateBMI(weight, height) {
 
 function getBMICategory(bmi) {
   if (bmi < 18.5) return 'Underweight';
-  if (bmi < 24.9) return 'Normal weight';
-  if (bmi < 29.9) return 'Overweight';
+  if (bmi < 25) return 'Normal weight';
+  if (bmi < 30) return 'Overweight';
   return 'Obesity';
 }
 
@@ -36,6 +36,8 @@ function calculateProteinIntake(weight) {
 
 // Body Fat % (US Navy method)
 function calculateBodyFat(gender, height, neck, waist, hip) {
+  // Input validation
+  if (height <= 0 || neck <= 0 || waist <= 0 || (gender === 'female' && hip <= 0)) return NaN;
   if (gender === 'male') {
     return 495 / (1.0324 - 0.19077 * Math.log10(waist - neck) + 0.15456 * Math.log10(height)) - 450;
   } else {
