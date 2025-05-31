@@ -1,62 +1,38 @@
 # copilot-demo-health-dashboard
 
-A simple Node.js project for health and nutrition calculations, including BMI, BMR, calorie, water, protein, and body fat percentage calculations. Includes automated tests using Jest.
+A simple web-based BMI & Health Dashboard. Users can log in, enter their health data, and view calculated health metrics such as BMI, BMR, daily calorie needs, water intake, protein intake, and body fat percentage.
 
 ## Features
-- Calculate BMI and BMI category
-- Calculate BMR (Harris-Benedict equation)
-- Calculate daily calorie intake
-- Calculate recommended water and protein intake
-- Calculate body fat percentage (US Navy method)
-- Automated unit tests with Jest
+- Member login UI
+- Health data input form
+- BMI, BMR, calorie, water, protein, and body fat calculations
+- Responsive, modern UI (Tailwind CSS + Bootstrap)
 
 ## Getting Started
 
 ### Prerequisites
-- Node.js (v14 or higher recommended)
-- npm
-
-### Installation
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/smmskn/copilot-demo-health-dashboard.git
-   cd copilot-demo-health-dashboard
-   ```
-2. Install dependencies:
-   ```sh
-   npm install
-   ```
-
-### Running Tests
-To run the automated tests:
-```sh
-npm test
-```
+- Web browser (Chrome, Firefox, Edge, etc.)
+- No installation required for basic usage
 
 ### Usage
-You can use the calculation functions in `healthUtils.js` in your own Node.js scripts:
+1. Clone this repository:
+   ```sh
+   git clone https://github.com/smmskn/copilot-demo-health-dashboard.git
+   ```
+2. Open `index.html` in your web browser.
+3. Log in with your credentials (see `login.js` for demo users or logic).
+4. Enter your health data in the form.
+5. View your health metrics on the dashboard.
 
-```js
-const {
-  calculateBMI,
-  getBMICategory,
-  calculateBMR,
-  calculateCalorieIntake,
-  calculateWaterIntake,
-  calculateProteinIntake,
-  calculateBodyFat
-} = require('./healthUtils');
+### File Structure
+- `index.html` — Main UI and logic
+- `healthUtils.js` — Health calculation functions
+- `login.js` — Login logic
+- `README.md` — This guide
 
-const bmi = calculateBMI(70, 175);
-console.log('BMI:', bmi);
-console.log('BMI Category:', getBMICategory(bmi));
-```
-
-## File Structure
-- `healthUtils.js` — Health and nutrition calculation functions
-- `healthUtils.test.js` — Automated Jest test cases
-- `index.html` — (Optional) For browser-based demo or documentation
-- `package.json` — Project configuration and dependencies
+## Customization
+- You can modify the login logic in `login.js` to connect to your own backend or authentication system.
+- Adjust calculation formulas in `healthUtils.js` as needed.
 
 ## License
-MIT
+This project is for demonstration and educational purposes.
